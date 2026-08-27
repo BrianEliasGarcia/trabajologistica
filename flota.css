@@ -1,0 +1,91 @@
+.video-logistica { /*Clase del video de la flota, con un ancho del 100% y altura de 450 pixeles y un ajuste de objeto para cubrir el contenedor*/
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #ff6600;
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.5);
+}
+
+
+body {
+    background-image: url("multimedia/index/blancofondo.jpeg");/*en el body ubicamos el fondo blanco, con las funciones que no se repitan*/
+    background-size: cover;  
+    background-position: center;/*ubicado en el centro y mantiene la proporción*/
+    background-repeat: no-repeat;
+}
+
+.titulo-flota {
+    color: #ff6600;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 40px 0;
+    text-shadow: 0px 0px 10px rgba(255, 102, 0, 0.7);
+
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+
+    transition: 0.4s ease;
+}
+.titulo-flota:hover { /*efecto hover del titulo, color en blanco, con una tranformacion de transicion*/
+    color: white;
+    letter-spacing: 6px;
+    text-shadow:
+        0px 0px 10px #ff6600,
+        0px 0px 20px #ff6600,
+        0px 0px 35px #ff6600;
+    transform: scale(1.05);
+
+}
+
+
+/*******************************************************/
+
+/* Contenedor principal */
+.vehiculo {
+    display: flex;
+    width: 100%;
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+/* Mitad izquierda */
+.imagen-vehiculo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+/* Imagen grande */
+.imagen-vehiculo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+/* Mitad derecha */
+.info-vehiculo {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(25, 25, 25, 0.9);
+    color: white;
+}
