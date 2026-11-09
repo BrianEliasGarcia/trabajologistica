@@ -1,0 +1,570 @@
+
+
+/*  IMPORTACION DE letra */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+
+/* Selecciona todos los elementos de la página. */
+* {
+    margin: 0;                 /* Elimina los márgenes predeterminados. */
+    padding: 0;                /* Elimina los espacios internos predeterminados. */
+    box-sizing: border-box;    /* Incluye padding y bordes dentro del ancho y alto. */
+}
+
+/* Configuración general del documento. */
+html {
+    width: 100%;               /* Ocupa todo el ancho disponible. */
+    overflow-x: clip;          /* Evita que contenido sobresaliente genere scroll horizontal. */
+}
+
+/* Configuración general del cuerpo. */
+body {
+    width: 100%;               /* Evita que el cuerpo supere el ancho de la pantalla. */
+    max-width: 100%;           /* Establece un límite de ancho. */
+    overflow-x: clip;          /* Recorta desbordamientos horizontales. */
+    background: #000;          /* Establece el fondo negro. */
+    color: white;              /* Establece el color de texto predeterminado. */
+    font-family: 'Poppins', sans-serif; /* Aplica Poppins a toda la página. */
+}
+
+
+
+/* NAV */
+
+
+/* Contenedor principal del navegador. */
+nav {
+    display: flex;             /* Coloca los elementos en una misma fila. */
+    align-items: center;       /* Centra verticalmente los elementos. */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos. */
+
+    width: 100%;               /* Ocupa todo el ancho de la pantalla. */
+    max-width: 100%;           /* Impide superar el ancho disponible. */
+    height: 110px;              /* Establece la altura del navegador. */
+    padding: 0 45px;            /* Agrega espacio a los costados. */
+
+    background-color: #000;     /* Fondo negro del navegador. */
+}
+
+/* Contenedor del logo. */
+.contenedor-logo {
+    display: flex;             /* Permite organizar el logo. */
+    align-items: center;       /* Centra verticalmente el logo. */
+    flex-shrink: 0;             /* Evita que el logo se comprima. */
+}
+
+/* Imagen del logo. */
+.logonav {
+    width: 180px;               /* Establece el ancho del logo. */
+    max-width: 100%;            /* Evita que supere su contenedor. */
+    height: auto;               /* Mantiene las proporciones originales. */
+    display: block;             /* Elimina espacios inferiores de imágenes inline. */
+    object-fit: contain;        /* Evita deformar el logo. */
+}
+
+/* Contenedores de los enlaces. */
+.inicio,
+.flota,
+.contacto {
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;        /* Centra verticalmente los enlaces. */
+    justify-content: center;    /* Centra horizontalmente los enlaces. */
+    flex: 1;                    /* Distribuye el espacio disponible. */
+    min-width: 0;               /* Permite que el contenido se adapte. */
+}
+
+/* Enlaces del navegador. */
+.items {
+    text-decoration: none;     /* Elimina el subrayado. */
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;       /* Centra el contenido verticalmente. */
+    justify-content: center;   /* Centra el contenido horizontalmente. */
+}
+
+/* Texto de los enlaces. */
+.texto {
+    color: #fff;                /* Color blanco. */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins. */
+    font-size: 19px;            /* Tamaño del texto. */
+    font-weight: 600;           /* Grosor seminegrita. */
+    letter-spacing: 1px;        /* Espacio entre letras. */
+    white-space: nowrap;        /* Evita que el texto se divida en varias líneas. */
+    transition: 0.3s ease;      /* Suaviza los cambios visuales. */
+}
+
+/* Efecto al pasar el mouse por los enlaces. */
+.items:hover .texto {
+    color: #ff7200;             /* Cambia el texto a naranja. */
+}
+
+
+/* CONTENEDOR DEL BOTON DE COTIZACION */
+nav section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex: 1;
+    min-width: 0;
+
+    margin-top: 0;
+
+    position: static; /* Elimina el desplazamiento del botón. */
+}
+
+/* Botón calcular cotización. */
+.funcion {
+    background: linear-gradient(135deg, #ff8c00, #ff5a00); /* Degradado naranja. */
+    color: white;               /* Texto blanco. */
+    border: none;               /* Elimina el borde predeterminado. */
+    border-radius: 35px;        /* Redondea las esquinas. */
+    padding: 18px 32px;         /* Espacio interno del botón. */
+
+    font-family: 'Poppins', sans-serif; /* Fuente del botón. */
+    font-size: 16px;            /* Tamaño del texto. */
+    font-weight: 600;           /* Grosor de la letra. */
+    letter-spacing: 0.5px;      /* Separación entre letras. */
+
+    cursor: pointer;            /* Cambia el cursor a una mano. */
+    white-space: nowrap;        /* Evita dividir el texto. */
+    flex-shrink: 0;             /* Evita comprimir el botón. */
+
+    transition: all 0.3s ease;  /* Suaviza todos los efectos. */
+}
+
+/* Efecto hover del botón. */
+.funcion:hover {
+    background: linear-gradient(135deg, #ff9d2e, #ff7200); /* Aclara el naranja. */
+    transform: translateY(-3px); /* Sube el botón 3 píxeles. */
+    box-shadow: 0 5px 20px rgba(255, 114, 0, 0.35); /* Agrega resplandor naranja. */
+}
+
+/* Cursor para todos los botones. */
+button {
+    cursor: pointer;            /* Muestra la mano al pasar el mouse. */
+}
+
+
+
+/* 4. PORTADA */
+
+
+/* Contenedor de la portada. */
+header {
+    width: 100%;                /* Ocupa todo el ancho disponible. */
+    max-width: 100%;            /* Evita superar el ancho de pantalla. */
+    overflow: hidden;           /* Recorta cualquier contenido sobresaliente. */
+}
+
+/* Imagen principal de portada. */
+.port {
+    display: block;             /* Elimina espacios inferiores de la imagen. */
+    width: 100%;                /* Ocupa todo el ancho del contenedor. */
+    max-width: 100%;            /* Evita desbordamientos. */
+    height: auto;               /* Mantiene la proporción de la imagen. */
+    object-fit: cover;          /* Ajusta la imagen al espacio disponible. */
+}
+
+
+/* SECTION DE SERVICIO */
+
+
+/* Contenedor principal de todos los servicios. */
+.serv {
+    display: flex;              /* Activa Flexbox. */
+    flex-direction: row;        /* Organiza los elementos horizontalmente. */
+    align-items: center;        /* Centra los elementos verticalmente. */
+    justify-content: center;    /* Centra el conjunto de servicios. */
+    flex-wrap: wrap;             /* Permite que los elementos bajen de línea. */
+
+    gap: 18px;                  /* Espacio entre servicios. */
+
+    width: 95%;                 /* Ocupa el 95% del ancho disponible. */
+    max-width: 100%;             /* Evita superar el ancho del contenedor. */
+    margin: 50px auto;           /* Separa la sección y la centra horizontalmente. */
+
+    overflow: visible;           /* Permite mostrar los textos desplegables. */
+}
+
+/* Título de nuestros servicios. */
+.servicios-titulo {
+    color: white;               /* Texto blanco. */
+    font-size: 28px;            /* Tamaño del título. */
+    font-weight: 700;           /* Grosor de la letra. */
+    margin-left: 5px;           /* Separación izquierda. */
+    white-space: nowrap;        /* Evita dividir el título. */
+    flex-shrink: 0;             /* Evita que se comprima. */
+}
+
+/* Contenedor individual de cada servicio. */
+.info {
+    position: relative;         /* Permite posicionar el texto desplegable. */
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;        /* Centra verticalmente la imagen. */
+
+    width: 125px;               /* Ancho de cada tarjeta. */
+    height: 125px;              /* Alto de cada tarjeta. */
+
+    flex-shrink: 0;             /* Evita que las tarjetas se achiquen. */
+    cursor: pointer;            /* Indica que es un elemento interactivo. */
+    z-index: 1;                 /* Establece su nivel de superposición. */
+}
+
+/* Imagen de cada servicio. */
+.info img {
+    display: block;             /* Elimina espacios inferiores. */
+    width: 125px;               /* Ancho de la imagen. */
+    height: 125px;              /* Alto de la imagen. */
+
+    object-fit: contain;        /* Mantiene la imagen completa. */
+
+    border: 1px solid #ff7200;  /* Borde naranja. */
+    border-radius: 12px;        /* Esquinas redondeadas. */
+
+    background-color: #111111;  /* Fondo gris oscuro. */
+
+    transition: all .3s ease;   /* Suaviza los efectos visuales. */
+}
+
+/* Texto que aparece al pasar el mouse. */
+.text {
+    position: absolute;         /* Permite superponer el texto a la tarjeta. */
+    left: 125px;                /* Ubica el texto a la derecha de la imagen. */
+    top: 0;                     /* Alinea el texto con la parte superior. */
+
+    width: 0;                   /* Comienza con ancho cero. */
+    max-width: calc(100vw - 145px); /* Evita que el panel supere la pantalla. */
+    height: 125px;              /* Igual altura que la imagen. */
+
+    display: flex;              /* Activa Flexbox. */
+    flex-direction: column;     /* Coloca título y descripción verticalmente. */
+    justify-content: center;   /* Centra el contenido verticalmente. */
+
+    overflow: hidden;           /* Oculta el texto mientras está cerrado. */
+    white-space: normal;        /* Permite dividir el texto en líneas. */
+
+    background-color: #111111;  /* Fondo gris oscuro. */
+
+    border: 1px solid #ff7200; /* Borde naranja. */
+    border-left: none;          /* Elimina el borde de unión con la imagen. */
+    border-radius: 0 12px 12px 0; /* Redondea las esquinas derechas. */
+
+    color: white;               /* Texto blanco. */
+
+    opacity: 0;                 /* Mantiene invisible el panel inicialmente. */
+    padding: 0;                 /* Sin espacio interno inicialmente. */
+
+    transition: width .4s ease, opacity .3s ease; /* Anima la apertura. */
+}
+
+/* Los dos últimos servicios despliegan el texto hacia la izquierda. */
+.info:nth-last-child(-n+2) .text {
+    left: auto;                 /* Desactiva la posición izquierda. */
+    right: 125px;               /* Ubica el panel a la izquierda de la imagen. */
+
+    border-left: 1px solid #ff7200; /* Recupera el borde izquierdo. */
+    border-right: none;         /* Elimina el borde derecho. */
+
+    border-radius: 12px 0 0 12px; /* Redondea las esquinas izquierdas. */
+}
+
+/* Efecto general al pasar el mouse por un servicio. */
+.info:hover {
+    z-index: 10;                /* Coloca la tarjeta por encima de las demás. */
+}
+
+/* Abre el panel de descripción. */
+.info:hover .text {
+    width: 260px;               /* Ancho del panel desplegado. */
+    opacity: 1;                 /* Hace visible la descripción. */
+    padding: 12px 15px;          /* Agrega espacio interno. */
+}
+
+/* Redondea la imagen cuando se abre el panel hacia la derecha. */
+.info:hover img {
+    border-radius: 12px 0 0 12px; /* Redondea solamente las esquinas izquierdas. */
+}
+
+/* Corrige el redondeado de las imágenes de los últimos dos servicios. */
+.info:nth-last-child(-n+2):hover img {
+    border-radius: 0 12px 12px 0; /* Redondea solamente las esquinas derechas. */
+}
+
+/* Título dentro de la descripción. */
+.text h5 {
+    color: #ff7200;             /* Color naranja. */
+    font-size: 16px;             /* Tamaño del título. */
+    margin-bottom: 8px;          /* Separación con la descripción. */
+}
+
+/* Descripción del servicio. */
+.text p {
+    color: whitesmoke;          /* Texto gris muy claro. */
+    font-size: 12px;             /* Tamaño de la descripción. */
+    line-height: 1.5;            /* Separación entre líneas. */
+    margin: 0;                   /* Elimina márgenes predeterminados. */
+}
+
+
+
+/* HISTORIA */
+
+
+/* Contenedor exterior de nuestra historia. */
+.historia {
+    background-color: #000;
+    width: 98%;                 /* Ocupa casi todo el ancho de pantalla. */
+    max-width: 100%;             /* Evita superar el ancho disponible. */
+    margin: 40px auto;           /* Separa la sección y la centra. */
+
+    padding: 35px 30px;          /* Espacio interno del recuadro. */
+
+    background: #111111;        /* Fondo gris oscuro. */
+
+    border: 1.5px solid #ff7200; /* Borde naranja. */
+    border-radius: 15px;         /* Esquinas redondeadas. */
+
+    transition: box-shadow .3s ease; /* Suaviza el resplandor. */
+}
+
+/* Título de nuestra historia. */
+.historia h2 {
+    text-align: center;         /* Centra el título. */
+
+    color: #ff6b35;             /* Color naranja. */
+
+    font-size: 35px;             /* Tamaño del título. */
+    font-weight: 700;            /* Grosor de la letra. */
+
+    margin-bottom: 30px;         /* Separación inferior. */
+    letter-spacing: 3px;         /* Espacio entre letras. */
+}
+
+/* Contenedor de los textos históricos. */
+.informacionhistoricatotalmente {
+    width: 100%;                /* Ocupa el ancho disponible. */
+    max-width: 100%;             /* Evita superar el contenedor. */
+
+    color: white;               /* Color general del texto. */
+    font-size: 17px;             /* Tamaño de letra. */
+    line-height: 1.8;            /* Espacio entre líneas. */
+    overflow-wrap: break-word;   /* Evita palabras largas fuera del contenedor. */
+}
+
+/* Párrafos de nuestra historia. */
+.informacionhistoricatotalmente p {
+    color: #eeeeee;             /* Color gris claro. */
+    margin-bottom: 12px;         /* Separación entre párrafos. */
+    text-align: justify;         /* Alinea el texto a ambos lados. */
+}
+
+/* Efecto al pasar el mouse por el recuadro. */
+.historia:hover {
+    box-shadow: 0 0 18px rgba(255, 114, 0, 0.12); /* Resplandor naranja suave. */
+}
+
+
+
+/* FOOTER */
+
+
+/* Configuración del footer. */
+.footer {
+    width: 100%;                /* Ocupa todo el ancho disponible. */
+    max-width: 100%;             /* Evita desbordamientos. */
+    margin-top: 50px;             /* Separa el footer del contenido anterior. */
+}
+
+
+/* ADAPATACION PARA CELULAR */
+
+
+@media (max-width: 1024px) {
+
+    /* Reduce los espacios del navegador en pantallas medianas. */
+    nav {
+        padding: 0 20px;          /* Reduce los márgenes laterales. */
+    }
+
+    /* Reduce el tamaño del logo. */
+    .logonav {
+        width: 140px;             /* Nuevo ancho del logo. */
+    }
+
+    /* Reduce el tamaño de los enlaces. */
+    .texto {
+        font-size: 16px;          /* Texto más pequeño. */
+    }
+
+    /* Reduce el tamaño del botón. */
+    .funcion {
+        font-size: 13px;          /* Letra más pequeña. */
+        padding: 14px 20px;       /* Reduce el espacio interno. */
+    }
+
+    /* Reduce la separación entre los servicios. */
+    .serv {
+        gap: 14px;                /* Menor separación entre tarjetas. */
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        height: auto;             /* Permite modificar su altura. */
+        min-height: 100px;        /* Establece una altura mínima. */
+        padding: 15px;            /* Espacio interno reducido. */
+        flex-wrap: wrap;          /* Permite bajar elementos de línea. */
+        gap: 15px;                /* Separación entre elementos. */
+    }
+
+    /* Reduce el logo. */
+    .logonav {
+        width: 110px;             /* Ancho para celulares. */
+    }
+
+    /* Distribuye los enlaces. */
+    .inicio,
+    .flota,
+    .contacto {
+        flex: 1;                  /* Distribuye el espacio. */
+    }
+
+    /* Reduce la letra de navegación. */
+    .texto {
+        font-size: 13px;          /* Tamaño adaptado al celular. */
+    }
+
+    /* Reubica el botón de cotización. */
+    nav section {
+        flex: 1 1 100%;           /* Ocupa una fila completa. */
+        justify-content: center;  /* Centra el botón. */
+        top: 0;                   /* Elimina el desplazamiento vertical. */
+    }
+
+    /* Reduce el botón. */
+    .funcion {
+        font-size: 12px;          /* Letra más pequeña. */
+        padding: 12px 20px;       /* Reduce el espacio interno. */
+    }
+
+    /* Centra los servicios. */
+    .serv {
+        justify-content: center;  /* Centra las tarjetas. */
+        gap: 15px;                 /* Separación entre tarjetas. */
+        width: 95%;                /* Ancho adaptable. */
+        margin: 35px auto;         /* Centra la sección. */
+    }
+
+    /* Centra el título de servicios. */
+    .servicios-titulo {
+        width: 100%;              /* Ocupa toda la fila. */
+        text-align: center;       /* Centra el texto. */
+        margin-bottom: 15px;       /* Separa el título de las tarjetas. */
+        font-size: 24px;           /* Reduce el tamaño. */
+    }
+
+    /* Reduce las tarjetas. */
+    .info {
+        width: 110px;             /* Nuevo ancho. */
+        height: 110px;            /* Nuevo alto. */
+    }
+
+    /* Reduce las imágenes. */
+    .info img {
+        width: 110px;             /* Ancho de imagen. */
+        height: 110px;            /* Alto de imagen. */
+    }
+
+    /* Ajusta los paneles desplegables. */
+    .text {
+        left: 110px;              /* Ajusta su posición. */
+        height: 110px;            /* Igual altura que la imagen. */
+        max-width: calc(100vw - 130px); /* Limita su ancho. */
+    }
+
+    /* Ajusta los dos últimos paneles. */
+    .info:nth-last-child(-n+2) .text {
+        right: 110px;             /* Ajusta la posición hacia la izquierda. */
+    }
+
+    /* Ajusta el tamaño del recuadro histórico. */
+    .historia {
+        width: 95%;               /* Reduce el ancho. */
+        padding: 25px 18px;       /* Reduce el espacio interno. */
+    }
+
+    /* Reduce el título histórico. */
+    .historia h2 {
+        font-size: 25px;          /* Tamaño adaptado. */
+        letter-spacing: 2px;      /* Reduce la separación entre letras. */
+    }
+
+    /* Reduce el texto histórico. */
+    .informacionhistoricatotalmente {
+        font-size: 14px;          /* Letra más pequeña. */
+        line-height: 1.7;         /* Ajusta la separación entre líneas. */
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    /* Reduce todavía más el espacio del navegador. */
+    nav {
+        padding: 12px;             /* Márgenes pequeños. */
+    }
+
+    /* Reduce el tamaño del logo. */
+    .logonav {
+        width: 90px;               /* Logo más pequeño. */
+    }
+
+    /* Reduce los enlaces. */
+    .texto {
+        font-size: 11px;           /* Letra pequeña. */
+        letter-spacing: 0;         /* Elimina separación adicional. */
+    }
+
+    /* Reduce las tarjetas de servicios. */
+    .info {
+        width: 95px;               /* Ancho reducido. */
+        height: 95px;              /* Alto reducido. */
+    }
+
+    /* Ajusta las imágenes. */
+    .info img {
+        width: 95px;               /* Ancho de imagen. */
+        height: 95px;              /* Alto de imagen. */
+    }
+
+    /* Ajusta los paneles de descripción. */
+    .text {
+        left: 95px;                /* Posición a la derecha. */
+        height: 95px;              /* Altura reducida. */
+        max-width: calc(100vw - 115px); /* Evita superar la pantalla. */
+    }
+
+    /* Ajusta los dos últimos paneles. */
+    .info:nth-last-child(-n+2) .text {
+        right: 95px;               /* Posición hacia la izquierda. */
+    }
+
+    /* Reduce el título histórico. */
+    .historia h2 {
+        font-size: 21px;           /* Tamaño para pantallas pequeñas. */
+    }
+
+    /* Reduce el texto histórico. */
+    .informacionhistoricatotalmente {
+        font-size: 13px;           /* Texto adaptado. */
+    }
+}
+

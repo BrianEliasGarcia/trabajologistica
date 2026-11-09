@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /*modificacion a todo el cuerpo de la pagina*/
+    font-family: Arial, sans-serif; /*letra que se va a utilizar y su segunda opcion*/
+    background: linear-gradient(135deg, #111111, #252525, #ff7200);/*fondo que usamos con la combinacion*/
+    background-repeat: no-repeat;   /*para que no se repita el fondo */
+    background-size: cover;/*para que se ajuste a la pantalla */
+    background-attachment: fixed; /* se mantiene la imagen, cuando se hace scroll */
+    color: white;/*letra de color blanca*/  
+    min-height: 100vh; /* es para que la pagin tengo un minimo de 100 en altura  */
+}
+
+/* NAV */
+
+
+/* Contenedor principal del navegador. */
+nav {
+    display: flex;             /* Coloca los elementos en una misma fila. */
+    align-items: center;       /* Centra verticalmente los elementos. */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos. */
+
+    width: 100%;               /* Ocupa todo el ancho de la pantalla. */
+    max-width: 100%;           /* Impide superar el ancho disponible. */
+    height: 110px;              /* Establece la altura del navegador. */
+    padding: 0 45px;            /* Agrega espacio a los costados. */
+
+    background: linear-gradient(135deg, #111111, #252525, #ff7200);     /* Fondo negro del navegador. */
+}
+
+/* Contenedor del logo. */
+.contenedor-logo {
+    display: flex;             /* Permite organizar el logo. */
+    align-items: center;       /* Centra verticalmente el logo. */
+    flex-shrink: 0;             /* Evita que el logo se comprima. */
+}
+
+/* Imagen del logo. */
+.logonav {
+    width: 180px;               /* Establece el ancho del logo. */
+    max-width: 100%;            /* Evita que supere su contenedor. */
+    height: auto;               /* Mantiene las proporciones originales. */
+    display: block;             /* Elimina espacios inferiores de imágenes inline. */
+    object-fit: contain;        /* Evita deformar el logo. */
+}
+
+/* Contenedores de los enlaces. */
+.inicio,
+.flota,
+.contacto {
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;        /* Centra verticalmente los enlaces. */
+    justify-content: center;    /* Centra horizontalmente los enlaces. */
+    flex: 1;                    /* Distribuye el espacio disponible. */
+    min-width: 0;               /* Permite que el contenido se adapte. */
+}
+
+/* Enlaces del navegador. */
+.items {
+    text-decoration: none;     /* Elimina el subrayado. */
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;       /* Centra el contenido verticalmente. */
+    justify-content: center;   /* Centra el contenido horizontalmente. */
+}
+
+/* Texto de los enlaces. */
+.texto {
+    color: #fff;                /* Color blanco. */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins. */
+    font-size: 19px;            /* Tamaño del texto. */
+    font-weight: 600;           /* Grosor seminegrita. */
+    letter-spacing: 1px;        /* Espacio entre letras. */
+    white-space: nowrap;        /* Evita que el texto se divida en varias líneas. */
+    transition: 0.3s ease;      /* Suaviza los cambios visuales. */
+}
+
+/* Efecto al pasar el mouse por los enlaces. */
+.items:hover .texto {
+    color: #ff7200;             /* Cambia el texto a naranja. */
+}
+
+
+
+
+/* Cursor para todos los botones. */
+button {
+    cursor: pointer;            /* Muestra la mano al pasar el mouse. */
+}
+
+
+
+
+header { /* encabezado de la pagina */
+    text-align: center; /* que este centrado */
+    padding: 35px 20px; /* un padding de 35 pixeles de largo y 20 de largo*/
+}
+
+.titulo-flota { /*h1 que vamos a modificar*/
+    color: #ff8000;/*el color del titulo*/
+    font-size: 40px;/*tamaño de la letra del 40m pixeles*/
+    letter-spacing: 2px; /*es el espacio entre las letras que se va a poner*/
+    margin-bottom: 10px; /* uso el margin para que no quede pegado al video y tenga 10 pixeles de diferencia+*/
+}
+
+
+main {/* cuerpo de dicha pagina*/
+    width: 90%; /* el ancho que este en un 90 porciento */
+    max-width: 1000px;/* como maximo que este en esos pixeles los que se puede poner*/ 
+    margin: 20px auto 40px auto; /*contorno del margin con sus respectivas medidas */
+}
+
+/* Video */
+.seccion-video {
+    margin-bottom: 35px;  /* clase del video, hacerle un contorno al video para que quede mas estetico*/
+}
+
+.video-logistica {
+    width: 100%; /*ancho del video que sea toda la pantalla*/
+    height: 400px; /*alto del video que sea de 400 pixeles */
+    object-fit: cover; /*hace que el video se ajuste a la pantalla y no se deforme*/ 
+    border-radius: 12px;/* borde de 12 pixeles para el video */
+    border: 2px solid #ff8000;/* que sea de 2pixelescon el color naranja*/
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* y otro border de color negro mas fina */
+}
+
+
+/* Tarjetas de vehículos */
+.flota {
+    display: flex; /* el display flex para que cada tarjeta se pueda ubicar una debajo de otra*/
+    flex-direction: column;/* esto es para que la direccion de cada tarjeta este se  encolumne*/
+}
+
+.vehiculo { 
+    display: flex; /*para que los items sean mas flexibles y se puedan acomodar mejor en la pagina */
+    background-color: #292929; /*fondo*/
+    border: 2px solid #292929;/*un borde de 2pixelkes */
+    border-radius: 12px;/* da un borde redondeado en las esquians*/ 
+    margin-bottom: 30px;/*es el espacio entre cada tarjeta de vehiculo*/
+    flex-direction: column; 
+}
+
+
+
+/* Lado de la imagen */
+.imagen-vehiculo {
+    min-width: 280px; /* el minimo del anchoo*/
+    background-color: #1b1b1b; /*fondo color negrito*/
+    display: flex; /*para que se acomoden mejor en la pantalla */
+    justify-content: center;/* la imagen que este en el centro*/
+    align-items: center; /*que quede centrado*/
+    padding: 25px; /* para que no quede pegado abajo*/
+    background-image: none;
+}
+
+    .imagen-vehiculo { 
+        min-width: 100%; /*el minimo del ancho al 100 porciento*/
+        max-width: 100%; /*el maximo del ancho al 100 porciento*/
+        border-right: none;
+        border-bottom: 2px solid #333333;
+        padding: 20px;
+    }
+
+.imagen-vehiculo img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,.6));
+}
+
+
+
+/* Lado de la información */
+.info-vehiculo {
+    display: flex; /*para que los items de la informacion es mas flexible y se acomode mejor en la pag*/
+    flex-direction: column;/*para que la info quede mas encolumnada y no desordenada*/
+    justify-content: center;/*informacion centrada*/
+    width: 100%; /*para que ocupe todo el ancho del contenedor*/
+    padding: 20px;
+}
+
+
+
+.info-vehiculo h2 {  /* el titulo de cada vehiculo*/
+    color: #ff8000;/*el color*/
+    font-size: 24px;/*el tamaño de la letra*/
+    margin-bottom: 12px;/*el margen inferior*/
+}
+
+.info-vehiculo p { /*para modificar el parrafo de la info de cada vehiculo*/
+    font-size: 15px; /* aca ponemos el tamaño de la letra del parrafo*/
+    line-height: 1.6;/*el interlineado entre cada linea del parrafo*/
+    color: #dddddd;/*es el color de la letra*/
+    margin-bottom: 16px; /*para que no quede pegado a la lista de abajo de la lista*/
+}
+
+
+.info-vehiculo ul {
+    list-style: none; /*es para que no aparezcan los puntos de la lista, desaparecen los puntos de la lista, queda mas lindo */
+}
+
+.info-vehiculo li { /* esto son los bordes de cada detalle de la lista, para que se vea mas estetico y no quede pegado a la letra*/
+    background-color: #181818; /* el fondo*/
+    padding: 10px 14px;/* el padding para que no quede pegado a la letra*/
+    margin-bottom: 8px;/* el margin para que no quede pegado a la letra*/
+    border-left: 4px solid #ff8000;/*para que haya un bordecito a la izq en naranja */
+    border-radius: 5px; /* para que el borde sea redondeado */
+    font-size: 14px; /*el tamaño de la letra de la lista*/
+    color: #cccccc;/*el color va a ser en blanco*/
+}
+
+
+
+.info-vehiculo strong { /* para poner en negrita los detalles de la lista*/
+    color: #ff8000;/* el color que le pusimos a la negrita, lo vamos a poner en naranja*/
+}
+
+
+footer { /* el pie de pagina que dice delta cargo 2026*/
+    text-align: center; /* que el texto se alinee*/
+    color: #999999;/* el color que le pusimos , es mas que nada un grisesito*/
+    padding: 25px 20px;/* predeterminamos el padding*/
+    margin-top: 20px;/* y el margin , mas que nada para su ubicacion*/
+}

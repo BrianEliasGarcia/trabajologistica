@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Flota - Delta Cargo</title> <!--Titulo de la pagina-->
+    <link rel="icon" href="multimedia/logo/logo.jpg" type="image/png"> <!--Es el icono de la pagina -->
+    <link rel="stylesheet" href="flota.css">  <!--Es para poder vincular el css-->
+</head>
+
+<body>  <!--Es el cuerpo de la pagina web-->
+    <nav>
+    <div class="contenedor-logo">
+        <img src="multimedia/index/delta_cargo_logo_nav.png"
+             alt="Logo Delta Cargo"
+             class="logonav">
+    </div>
+
+    <div class="inicio">
+        <a href="index.html" class="items">
+            <span class="texto">INICIO</span>
+        </a>
+    </div>
+
+    <div class="flota">
+        <a href="flota.html" class="items">
+            <span class="texto">FLOTA</span>
+        </a>
+    </div>
+
+    <div class="contacto">
+        <a href="contacto.html" class="items">
+            <span class="texto">CONTACTO</span>
+        </a>
+    </div>
+</nav>
+    <header>  <!--Este es el encabezado de la pagina -->
+        <h1 class="titulo-flota">Nuestra Flota</h1>  <!--Titulo con un H1 y de paso le ponemos una clase para poder modificarla en el css-->
+    </header>
+
+
+    <main>  <!--Etiqueta principal donde van a estar el crudo-->
+
+        <section class="seccion-video">  <!--Usamos la etiqueta de seccion para poder poner el video y le damos una clase para modificarla en el css -->
+            <video controls width="700" muted autoplay loop class="video-logistica">  <!--Etiqueta para que muestre el video, con una modificacion de el ancho y con restricciones para que se reproduzca, aparte hay una clase para modificar en el css-->
+                <source src="multimedia/flota/VideoLogistica.mp4" type="video/mp4">  <!--Esta es la etiqueta para el video,donde en el src va a estar la ruta del video y como le vamos a poner del titulo-->
+            </video>
+        </section>
+
+        <section class="flota">  <!--Usamos la etiqueta seccion para usar la clase flota y poder modicar los 3 vehiculos correspondientes -->
+
+            <!-- MOTOS -->
+            <article class="vehiculo">   <!--Etiqueta de articulo para poner la clase vehiculo y poner toda la info sobre la moto --> 
+                <div class="imagen-vehiculo">  <!--Abrimos un contenedor para hacerle modificaciones a la foto de la moto, con la clase imagen-vehiculo-->
+                    <img src="multimedia/flota/moto.png" alt="Motos para envíos rápidos">  <!--Etiqueta de imagen para poner la imagen de la moto, con su respectiva ruta y descripcion-->
+                </div>
+
+                <div class="info-vehiculo">   <!--Se abre contenedor para modificar todas las informacion de los 3 vehiculos, con la clase info-vehiculo-->
+                    <h2>Motos</h2>  <!--Se empieza con la moto-->
+                    <p>
+                        Nuestras motos son la opción más rápida para envíos urgentes y paquetería liviana dentro de la ciudad. Permiten evitar demoras por el tráfico y realizar entregas en el día puerta a puerta.
+                    </p> 
+
+                    <ul> <!--Lista con la informacion-->
+                        <li><strong>Capacidad:</strong> Hasta 25 - 30 kg.</li>
+                        <li><strong>Tipo de carga:</strong> Sobres, documentación, paquetes chicos y pedidos de e-commerce.</li>
+                        <li><strong>Servicio:</strong> Entregas express en el día y mensajería programada.</li>
+                        <li><strong>Seguridad:</strong> Baúl hermético para proteger los paquetes contra lluvia o golpes.</li>
+                    </ul>
+                </div>
+            </article>
+
+                 <!--Lo repetimos lo mismo en los 3 vehiculos, para que tenga un mismo orden -->
+            <!--FURGONES -->
+            <article class="vehiculo">
+                <div class="imagen-vehiculo">
+                    <img src="multimedia/flota/furgon.png" alt="Utilitarios y furgones">
+                </div>
+
+                <div class="info-vehiculo">
+                    <h2>Utilitarios y Furgones</h2>
+                    <p>
+                        Vehículos diseñados para la distribución diaria de mercadería de mediano porte, tanto en el casco urbano como en viajes interurbanos. Cuentan con furgón cerrado para mantener la carga resguardada.
+                    </p>
+
+                    <ul>
+                        <li><strong>Capacidad:</strong> De 600 kg a 1.500 kg de carga útil.</li>
+                        <li><strong>Espacio:</strong> Volumen de 6 a 12 m³ (hasta 2 pallets estándar).</li>
+                        <li><strong>Tipo de carga:</strong> Cajas medianas, electrodomésticos, indumentaria y reposición comercial.</li>
+                        <li><strong>Cobertura:</strong> Repartos locales y distribución regional.</li>
+                    </ul>
+                </div>
+            </article>
+
+
+            <!-- CAMIONES -->
+            <article class="vehiculo">
+                <div class="imagen-vehiculo">
+                    <img src="multimedia/flota/camiions.jpg" alt="Camiones de carga pesada">
+                </div>
+
+                    <div class="info-vehiculo">
+                        <h2>Camiones de Carga Pesada</h2>
+                    <p>
+                        Unidades preparadas para traslados de larga distancia y grandes cargas a diferentes puntos del país. Ideales para empresas que precisan mover volumen de manera segura y confiable.
+                    </p>
+
+                    <ul>
+                        <li><strong>Capacidad:</strong> Desde 5.000 kg hasta 24.000 kg (chasis y semirremolques).</li>
+                        <li><strong>Espacio:</strong> Cargas de gran porte y hasta 28 pallets.</li>
+                        <li><strong>Tipo de carga:</strong> Mercadería paletizada, insumos industriales y pedidos mayoristas.</li>
+                        <li><strong>Cobertura:</strong> Envíos nacionales y rutas de larga distancia.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>  <!--el pie de pagina para meterle info y chiches-->
+        <p>© 2026 Delta Cargo</p>
+    </footer>
+
+</body>
+
+</html>

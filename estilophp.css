@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box; /*le explica al navegador como calcular el tamaño, para que incluya todo*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #111111, #252525, #ff7200); 
+    color: white;
+    min-height: 100vh; /*vh es para que mida el 100% de la altura de la pantalla*/
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ff7200, #ff9d2e); /*es para que  fondo sea un degradado de colores*/
+    color: black;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: 12px;
+    line-height: 2;
+    font-size: 20px;
+}

@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box; /*le explica al navegador como calcular el tamaño, para que incluya todo*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #111111, #252525, #ff7200); 
+    color: white;
+    min-height: 100vh; /*vh es para que mida el 100% de la altura de la pantalla*/
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ff7200, #ff9d2e); /*es para que  fondo sea un degradado de colores*/
+    color: black;
+}
+
+/* NAV */
+
+
+/* Contenedor principal del navegador. */
+nav {
+    display: flex;             /* Coloca los elementos en una misma fila. */
+    align-items: center;       /* Centra verticalmente los elementos. */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos. */
+
+    width: 100%;               /* Ocupa todo el ancho de la pantalla. */
+    max-width: 100%;           /* Impide superar el ancho disponible. */
+    height: 110px;              /* Establece la altura del navegador. */
+    padding: 0 45px;            /* Agrega espacio a los costados. */
+
+    background: linear-gradient(135deg, #111111, #252525, #ff7200);     /* Fondo negro del navegador. */
+}
+
+/* Contenedor del logo. */
+.contenedor-logo {
+    display: flex;             /* Permite organizar el logo. */
+    align-items: center;       /* Centra verticalmente el logo. */
+    flex-shrink: 0;             /* Evita que el logo se comprima. */
+}
+
+/* Imagen del logo. */
+.logonav {
+    width: 180px;               /* Establece el ancho del logo. */
+    max-width: 100%;            /* Evita que supere su contenedor. */
+    height: auto;               /* Mantiene las proporciones originales. */
+    display: block;             /* Elimina espacios inferiores de imágenes inline. */
+    object-fit: contain;        /* Evita deformar el logo. */
+}
+
+/* Contenedores de los enlaces. */
+.inicio,
+.flota,
+.contacto {
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;        /* Centra verticalmente los enlaces. */
+    justify-content: center;    /* Centra horizontalmente los enlaces. */
+    flex: 1;                    /* Distribuye el espacio disponible. */
+    min-width: 0;               /* Permite que el contenido se adapte. */
+}
+
+/* Enlaces del navegador. */
+.items {
+    text-decoration: none;     /* Elimina el subrayado. */
+    display: flex;              /* Activa Flexbox. */
+    align-items: center;       /* Centra el contenido verticalmente. */
+    justify-content: center;   /* Centra el contenido horizontalmente. */
+}
+
+/* Texto de los enlaces. */
+.texto {
+    color: #fff;                /* Color blanco. */
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins. */
+    font-size: 19px;            /* Tamaño del texto. */
+    font-weight: 600;           /* Grosor seminegrita. */
+    letter-spacing: 1px;        /* Espacio entre letras. */
+    white-space: nowrap;        /* Evita que el texto se divida en varias líneas. */
+    transition: 0.3s ease;      /* Suaviza los cambios visuales. */
+}
+
+/* Efecto al pasar el mouse por los enlaces. */
+.items:hover .texto {
+    color: #ff7200;             /* Cambia el texto a naranja. */
+}
+
+
+
+
+/* Cursor para todos los botones. */
+button {
+    cursor: pointer;            /* Muestra la mano al pasar el mouse. */
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#subtitulo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #292929;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid #292929;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    border-color: #ff9d2e;
+    box-shadow: 0 12px 30px rgba(255, 122, 0, .15);
+}
+
+h2 {
+    color: #ff8000;
+    font-size: 25px;
+    margin-bottom: 20px; /* el espacio abajo del elemento */
+    border-left: 5px solid #ff8000;
+    padding-left: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.intform {
+    width: 100%;
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    background-color: #111111;
+    color: white;
+    border: 1px solid #666666;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: .3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff8000;
+    outline: none; /* para sacar el contorno que pone el navegador en el elemento*/
+}
+
+textarea {
+    resize: vertical; /*para que el usuario cambie el tamaño verticalmente*/
+}
+
+#boton {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff7200, #ff9d2e);
+    color: black;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer; /* para que cuando pongas el cursor aparezca el puntero */
+    transition: .3s;
+}
+
+#boton:hover {
+    background: linear-gradient(135deg, #ff9d2e, #ff7200);
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(255, 122, 0, .15); /* la sombra de el elemento*/
+}
+
+section p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+strong {
+    color: #ff8000;
+}
+
+ul {
+    list-style: none; /* para sacarle los puntos a las listas de html*/
+}
+
+li {
+    background-color: #181818;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #ff8000; /* crea solo el borde izquierdo*/
+    border-radius: 5px;
+    transition: .3s;
+}
+
+li:hover {
+    background-color: #333333;
+    transform: translateX(5px);
+}
+
+section a {
+    display: flex;
+    text-decoration: none;
+    color: #ff8000;
+    padding: 9px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ff8000;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+section a:hover {
+    background-color: #ff8000;
+    color: black;
+    transform: scale(1.05);
+}
+
+.redes {
+    display: flex;
+    justify-content: space-between; /* para dejar un espacio entre los elementosd*/
+    width: 100%;
+}
+
+.redes a {
+    width: 20%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ff8000;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.redes a img {
+    width: 30px;
+    height: 30px;
+}
+
+.redes a span {
+    display: none;
+}
+
+.redes a:hover {
+    background-color: #ff8000;
+    color: black;
+    transform: scale(1.05);
+}
+
+.redes a:hover span {
+    display: inline; /* inline para que el elemento se comporte como parte de una linea de texto*/
+}
+
+.redes a:hover img {
+    margin-right: 7px;
+}
+
+section a img {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle; /*para alinear el elemento verticalmente respecto de otros elementos de la misma linea*/
+    margin-right: 5px;
+}
+
+footer {
+    text-align: center;
+    color: #999999;
+    padding: 20px;
+    margin-top: 20px;
+}
